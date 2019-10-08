@@ -1,14 +1,9 @@
-<template>
-  <HelloWorld />
+<template lang="pug">
+  p aaaaa
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import HelloWorld from '../components/HelloWorld.vue';
-
-export default Vue.extend({
-  components: {
-    HelloWorld,
-  },
-});
+export default {
+  name: 'Home',
+}
 </script>
