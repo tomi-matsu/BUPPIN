@@ -1,0 +1,11 @@
+.expand-enter-active {
+  transform: translate(0px, 0px);
+  transition: transform 600ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+.expand-leave-active {
+  transform: translate(0px, 0px);
+  transition: transform 5000ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+.expand-enter, .expand-leave-to {
+  transform: translateY(100vh);
+}

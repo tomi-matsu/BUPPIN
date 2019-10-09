@@ -8,17 +8,20 @@
         v-icon.icon mdi-settings-outline
         span.label setting
     .home
-
 </template>
 
 <script lang="ts" scoped>
-export default {
-  name: 'Footer',
-  mounted() {
-    console.log('footer')
+import { Component, Vue } from 'vue-property-decorator'
+
+@Component({
+  components: {
   },
+})
+
+export default class Footer extends Vue {
 }
 </script>
+
 <style lang="scss">
 .footer {
   width: 100vw;
@@ -26,6 +29,7 @@ export default {
   position: fixed;
   bottom: 0;
   background-color: #EAEAEA;
+  // box-shadow: 0 -1px 10px 1px #cccccc;
 }
 .side-menu-wrap {
   display: flex;
