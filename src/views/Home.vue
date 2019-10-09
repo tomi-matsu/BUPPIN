@@ -1,7 +1,7 @@
 <template lang="pug">
   .container-wrap
     v-btn(@click="onChangeModal") modal
-    transition(name='expand')
+    transition(name='toast')
       MessageModal(v-if="displayModal")
 </template>
 

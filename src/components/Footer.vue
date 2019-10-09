@@ -25,7 +25,7 @@ export default class Footer extends Vue {
 <style lang="scss">
 .footer {
   width: 100vw;
-  height: 48px;
+  height: 56px;
   position: fixed;
   bottom: 0;
   background-color: #EAEAEA;
@@ -34,12 +34,13 @@ export default class Footer extends Vue {
 .side-menu-wrap {
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 .side-menu {
   width: 33vw;
   text-align: center;
   display: grid;
-  padding: .2em .5em;
+  padding: .5em;
   .label {
     font-size: .8em;
   }
