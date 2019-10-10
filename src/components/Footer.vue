@@ -7,7 +7,8 @@
       .side-menu.right
         v-icon.icon mdi-settings-outline
         span.label setting
-    .home
+    v-btn.home(fab dark color="#FACE3B")
+      v-icon mdi-history
 </template>
 
 <script lang="ts" scoped>
@@ -29,7 +30,6 @@ export default class Footer extends Vue {
   position: fixed;
   bottom: 0;
   background-color: #EAEAEA;
-  // box-shadow: 0 -1px 10px 1px #cccccc;
 }
 .side-menu-wrap {
   display: flex;
@@ -39,20 +39,19 @@ export default class Footer extends Vue {
 .side-menu {
   width: 33vw;
   text-align: center;
-  display: grid;
   padding: .5em;
+  .icon {
+    margin-right: 8px;
+    font-size: 1em;
+  }
   .label {
     font-size: .8em;
   }
 }
 .home {
-  width: 33vw;
-  height: 33vw;
-  background-color: #FACE3B;
-  position: fixed;
-  bottom: calc(-33vw / 2);
+  z-index: 10;
+  bottom: 56px + 28px;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 50%;
 }
 </style>

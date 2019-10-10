@@ -1,6 +1,6 @@
 <template lang="pug">
   .header
-    v-toolbar(flat="false" color="#EAEAEA")
+    v-toolbar(color="#EAEAEA")
       v-toolbar-title BUPPIN
 
 </template>
