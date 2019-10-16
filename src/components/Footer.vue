@@ -1,14 +1,14 @@
 <template lang="pug">
   .footer
     .side-menu-wrap
-      .side-menu.left
+      .side-menu.left(@click="$router.push({name: 'history'})")
         v-icon.icon mdi-format-list-bulleted
-        span.label list
+        span.label history
       .side-menu.right
         v-icon.icon mdi-settings-outline
         span.label setting
-    v-btn.home(fab dark color="#FACE3B")
-      v-icon mdi-history
+    v-btn.home(fab dark color="#FACE3B" @click="$router.push({name: 'home'})")
+      v-icon
 </template>
 
 <script lang="ts" scoped>
@@ -26,7 +26,7 @@ export default class Footer extends Vue {
 <style lang="scss">
 .footer {
   width: 100vw;
-  height: 56px;
+  height: 48px;
   position: fixed;
   bottom: 0;
   background-color: #EAEAEA;
@@ -37,9 +37,9 @@ export default class Footer extends Vue {
   height: 100%;
 }
 .side-menu {
-  width: 33vw;
+  width: 45vw;
   text-align: center;
-  padding: .5em;
+  padding: .7em .5em;
   .icon {
     margin-right: 8px;
     font-size: 1em;
@@ -50,7 +50,7 @@ export default class Footer extends Vue {
 }
 .home {
   z-index: 10;
-  bottom: 56px + 28px;
+  bottom: 48px + 24px;
   left: 50%;
   transform: translateX(-50%);
 }
