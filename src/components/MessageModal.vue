@@ -15,9 +15,9 @@ export default class MessageModal extends Vue {
 .message-modal {
   position: fixed;
   bottom: 0;
-  margin-bottom: 48px;
+  margin-bottom: 60px;
   width: 100vw;
-  padding: 16px 32px;
+  padding: 16px 32px 32px;
   background-color: #EAEAEA;
   border-radius: 40px 40px 0 0;
   text-align: center;

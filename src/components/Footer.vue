@@ -26,7 +26,7 @@ export default class Footer extends Vue {
 <style lang="scss">
 .footer {
   width: 100vw;
-  height: 48px;
+  height: 60px;
   position: fixed;
   bottom: 0;
   background-color: #EAEAEA;
@@ -50,7 +50,7 @@ export default class Footer extends Vue {
 }
 .home {
   z-index: 10;
-  bottom: 48px + 24px;
+  bottom: 60px + 30px;
   left: 50%;
   transform: translateX(-50%);
 }

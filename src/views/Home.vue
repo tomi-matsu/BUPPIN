@@ -1,6 +1,6 @@
 <template lang="pug">
   .container-wrap
-    //- v-btn(@click="onChangeModal") modal
+    v-btn(@click="onChangeModal") modal
     IconBase
       IconNfc
     transition(name='toast')
