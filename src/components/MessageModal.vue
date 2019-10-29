@@ -21,6 +21,10 @@ export default class MessageModal extends Vue {
   background-color: #EAEAEA;
   border-radius: 40px 40px 0 0;
   text-align: center;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 .date {
   font-size: .8em;

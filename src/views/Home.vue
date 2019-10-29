@@ -29,7 +29,7 @@ export default class Home extends Vue {
   引数: $event: Event は省略可
   何も return しない場合は void
   */
-  public onChangeModal($event: Event): void {
+  private onChangeModal($event: Event): void {
     this.displayModal = !this.displayModal
   }
 }

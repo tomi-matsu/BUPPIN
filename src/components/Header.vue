@@ -1,6 +1,6 @@
 <template lang="pug">
   .header
-    v-toolbar(color="#EAEAEA" max-height="60")
+    v-toolbar(color="#EAEAEA" height="60" flat="true")
       v-toolbar-title {{ title }}
 
 </template>
@@ -27,8 +27,5 @@ export default class Footer extends Vue {
 
 <style lang="scss">
 .header {
-  .v-toolbar__content {
-    max-height: 60px;
-  }
 }
 </style>

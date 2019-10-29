@@ -1,13 +1,13 @@
 <template lang="pug">
   .footer
     .side-menu-wrap
-      .side-menu.left(@click="$router.push({name: 'history'})")
+      .side-menu.left(@click="switchRoute('history')")
         v-icon.icon mdi-format-list-bulleted
         span.label history
       .side-menu.right
         v-icon.icon mdi-settings-outline
         span.label setting
-    v-btn.home(fab dark color="#FACE3B" @click="$router.push({name: 'home'})")
+    v-btn.home(large fab dark color="#FACE3B" @click="switchRoute('home')")
       v-icon
 </template>
 
@@ -20,6 +20,11 @@ import { Component, Vue } from 'vue-property-decorator'
 })
 
 export default class Footer extends Vue {
+  public switchRoute(pathName: string): void {
+    /* tslint:disable:no-empty */
+    // NavigationDuplicated 回避のため無名関数を2つ追加（理由不明）
+    this.$router.push({ name: pathName }, () => {}, () => {})
+  }
 }
 </script>
 
@@ -39,7 +44,7 @@ export default class Footer extends Vue {
 .side-menu {
   width: 45vw;
   text-align: center;
-  padding: .7em .5em;
+  padding: 1em .5em;
   .icon {
     margin-right: 8px;
     font-size: 1em;
