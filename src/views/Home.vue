@@ -1,8 +1,15 @@
 <template lang="pug">
   .container-wrap
+<<<<<<< Updated upstream
     v-btn(@click="onChangeModal") modal
     IconBase
       IconNfc
+=======
+    //- v-btn(@click="onChangeModal") modal
+    .icon
+      IconBase.icon-nfc
+        IconNfc
+>>>>>>> Stashed changes
     transition(name='toast')
       MessageModal(v-if="displayModal")
 </template>
@@ -34,3 +41,13 @@ export default class Home extends Vue {
   }
 }
 </script>
+
+<style lang="scss">
+.icon {
+  height: 100%;
+  line-height: 100%;
+  .icon-nfc {
+    vertical-align: middle;
+  }
+}
+</style>
