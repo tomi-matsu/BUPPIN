@@ -1,15 +1,9 @@
 <template lang="pug">
   .container-wrap
-<<<<<<< Updated upstream
-    v-btn(@click="onChangeModal") modal
-    IconBase
-      IconNfc
-=======
     //- v-btn(@click="onChangeModal") modal
     .icon
       IconBase.icon-nfc
         IconNfc
->>>>>>> Stashed changes
     transition(name='toast')
       MessageModal(v-if="displayModal")
 </template>
