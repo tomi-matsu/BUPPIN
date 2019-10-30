@@ -1,11 +1,10 @@
 <template lang="pug">
   .container-wrap
-    //- v-btn(@click="onChangeModal") modal
     .icon
       IconBase.icon-nfc
         IconNfc
     transition(name='toast')
-      MessageModal(v-if="displayModal" itemName="itemName")
+      MessageModal(v-if="displayModal" :item-name="itemName" :date-time="dateTime")
 </template>
 
 <script lang="ts">
@@ -26,9 +25,10 @@ import IconNfc from '@/components/icons/IconNfc.vue'
 export default class Home extends Vue {
   /* data */
   public displayModal: boolean = false
-  public itemId: number = Number()
+  // public itemId: number = Number()
   public itemName: string = ''
   public itemStatus: number = Number()
+  public dateTime: Date = new Date()
 
   /* mounted */
   public mounted() {
@@ -49,18 +49,18 @@ export default class Home extends Vue {
     // TODO: Error -> data: object
     return window.nfc.addNdefListener((data: any): void => {
       console.log('successfully attached ndef listener')
-      this.getNfcData(window.nfc.bytesToString(data.tag.ndefMessage[0].payload))
+      this.getNfcData(window.nfc.bytesToString(data.tag.ndefMessage[0].payload), data.srcElement.lastModified)
+      this.showModal()
     }, (err: string): void => {
       console.log('error attaching ndef listener', err)
     })
   }
-  public getNfcData(data: string): void {
+  public getNfcData(data: string, dateTime: Date): void {
     const splitNfcData: string[] = data.split('_')
-    this.itemId = Number(splitNfcData[0].slice(2))
+    // this.itemId = Number(splitNfcData[0].slice(3))
     this.itemName = splitNfcData[1]
     this.itemStatus = Number(splitNfcData[2])
-    console.log(0)
-    this.showModal()
+    this.dateTime = dateTime
   }
   public showModal(): void {
     this.displayModal = true
@@ -73,10 +73,13 @@ export default class Home extends Vue {
 
 <style lang="scss">
 .icon {
-  height: 100%;
-  line-height: 100%;
+  // height: 50vh;
+  // position: relative;
   .icon-nfc {
-    vertical-align: middle;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 </style>

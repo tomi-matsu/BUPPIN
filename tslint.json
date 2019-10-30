@@ -16,6 +16,8 @@
     "ordered-imports": false,
     "quotemark": [true, "single"],
     "semicolon": [true, "never"],
-    "no-console": [false]
+    "no-console": [false],
+    "curly": false,
+    "arrow-return-shorthand": true
   }
 }

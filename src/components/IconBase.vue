@@ -13,11 +13,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 
-@Component({
-  components: {
-  },
-})
-
+@Component
 export default class IconBase extends Vue {
   @Prop({ default: 'nfc' })
   public iconName!: string

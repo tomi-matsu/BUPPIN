@@ -14,11 +14,7 @@
 <script lang="ts" scoped>
 import { Component, Vue } from 'vue-property-decorator'
 
-@Component({
-  components: {
-  },
-})
-
+@Component
 export default class Footer extends Vue {
   public switchRoute(pathName: string): void {
     /* tslint:disable:no-empty */

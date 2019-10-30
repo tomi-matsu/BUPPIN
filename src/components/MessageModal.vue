@@ -1,22 +1,21 @@
 <template lang="pug">
   .message-modal
-    //- p.date {{ DateTime }}
+    p.date {{ DateTime }}
     p.text {{ itemName }} を借りました
 </template>
 
 <script lang="ts" scoped>
-import { Component, Prop, Vue } from 'vue-property-decorator'
+import { Component, Prop, Watch, Vue } from 'vue-property-decorator'
+
+@Component
 
 export default class MessageModal extends Vue {
-  // @Prop({ default: new Date() })
-  // public DateTime!: Date
+  @Prop({ default: new Date() })
+  public DateTime!: Date
   @Prop({ default: '' })
   public itemName!: string
-  // @Prop({ default: Number() })
-  // public status!: number
-  public mounted() {
-    console.log(1)
-  }
+  @Prop({ default: Number() })
+  public status!: number
 }
 </script>
 
@@ -26,7 +25,7 @@ export default class MessageModal extends Vue {
   bottom: 0;
   margin-bottom: 60px;
   width: 100vw;
-  padding: 16px 32px 32px;
+  padding: 25px 32px 48px;
   background-color: #EAEAEA;
   border-radius: 40px 40px 0 0;
   text-align: center;
