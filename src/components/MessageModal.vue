@@ -1,13 +1,22 @@
 <template lang="pug">
   .message-modal
-    p.date 2019/10/10 12:00
-    p.text 鍵No.1を借りました
+    //- p.date {{ DateTime }}
+    p.text {{ itemName }} を借りました
 </template>
 
 <script lang="ts" scoped>
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 export default class MessageModal extends Vue {
+  // @Prop({ default: new Date() })
+  // public DateTime!: Date
+  @Prop({ default: '' })
+  public itemName!: string
+  // @Prop({ default: Number() })
+  // public status!: number
+  public mounted() {
+    console.log(1)
+  }
 }
 </script>
 

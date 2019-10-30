@@ -22,8 +22,7 @@ import { Component, Vue } from 'vue-property-decorator'
 export default class Footer extends Vue {
   public switchRoute(pathName: string): void {
     /* tslint:disable:no-empty */
-    // NavigationDuplicated 回避のため無名関数を2つ追加（理由不明）
-    this.$router.push({ name: pathName }, () => {}, () => {})
+    this.$router.push({ name: pathName }, () => {}, () => {}) // avoid NavigationDuplicated
   }
 }
 </script>

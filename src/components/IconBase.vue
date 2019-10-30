@@ -20,11 +20,11 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 
 export default class IconBase extends Vue {
   @Prop({ default: 'nfc' })
-  private iconName!: string
+  public iconName!: string
   @Prop({ default: 250 })
-  private width!: number
+  public width!: number
   @Prop({ default: 250 })
-  private height!: number
+  public height!: number
 }
 </script>
 
