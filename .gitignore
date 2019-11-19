@@ -27,3 +27,6 @@ yarn-error.log*
 /src-cordova/platforms
 /src-cordova/plugins
 /public/cordova.js
+
+# local env files
+.env.development

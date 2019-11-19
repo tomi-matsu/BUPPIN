@@ -1,5 +1,6 @@
 <template lang="pug">
   .container-wrap
+    v-btn(@click="test") test
     .icon
       IconBase.icon-nfc
         IconNfc
@@ -8,7 +9,9 @@
 </template>
 
 <script lang="ts">
+import axios from 'axios'
 import { Component, Vue } from 'vue-property-decorator'
+import { ItemModule } from '@/store'
 import window from '@/window'
 import MessageModal from '@/components/MessageModal.vue'
 import IconBase from '@/components/IconBase.vue'
@@ -67,6 +70,9 @@ export default class Home extends Vue {
     setTimeout(() => {
       this.displayModal = false
     }, 4000)
+  }
+  public test(): void {
+    ItemModule.updateItem(JSON.stringify({name: 'test'}))
   }
 }
 </script>
