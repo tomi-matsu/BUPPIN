@@ -9,7 +9,7 @@ import '@/assets/styles/transition.scss'
 import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false
-axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
+// axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 
 new Vue({
   router,

@@ -21,16 +21,6 @@ class Item extends VuexModule {
   //   this.count -= delta
   // }
 
-  // // action 'incr' commits mutation 'increment' when done with return value as payload
-  // @Action({ commit: 'increment' })
-  // incr() {
-  //   return 5
-  // }
-  // // action 'decr' commits mutation 'decrement' when done with return value as payload
-  // @Action({ commit: 'decrement' })
-  // decr() {
-  //   return 5
-  // }
   @Action({ commit: '' })
   public getItem() {
     return api.getItem()
